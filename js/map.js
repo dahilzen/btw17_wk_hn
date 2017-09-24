@@ -7,7 +7,7 @@ function main() {
         attributionControl: false,
         legends: false,
         layer_selector: false,
-    }).setView([49.2127168, 9.3962733], 10);
+    }).setView([49.2285040, 9.1571390], 8);
 
     // Zoomfunktion komplett deaktivieren
     map_object.touchZoom.disable();
