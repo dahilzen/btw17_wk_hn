@@ -24,7 +24,7 @@ function main() {
     }).addTo(map_object);
 
     // cartodb createLayer
-    cartodb.createLayer(map_object, 'https://dahilzen.carto.com/api/v2/viz/acee326d-57cb-4d82-a854-bc144b2ef8d6/viz.json', {
+    cartodb.createLayer(map_object, 'https://dahilzen.carto.com/api/v2/viz/ffa6b26e-a16c-11e7-9357-0ea7a2e498dc/viz.json', {
             legends: false,
             cartodb_logo: false,
             mobile_layout: true,
