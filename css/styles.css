@@ -1,0 +1,90 @@
+html, body #map {
+  width: 100%;
+  height: 600px;
+  padding: 0;
+  margin: 0;
+  background: white;
+}
+
+.btn, .btn-primary {
+  color: black !important;
+  background-color: white !important;
+  width: 220px;
+  height: 30px;
+  left: 5px;
+  top: 15px;
+  z-index: 30 !important;
+}
+
+.dropdown-menu {
+  width: 220px;
+}
+
+h2 {
+  color: black !important;
+  line-height: 1 !important;
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+table {
+  table-layout: fixed;
+  width: 80%;
+}
+
+.dropdown {
+  color: black !important;
+  background-color: white !important;
+  width: 220px;
+  height: 30px;
+  left: 5px;
+  top: 15px;
+  z-index: 30 !important;
+}
+
+
+.leaflet-container {
+  z-index: 1;
+  position: absolute;
+}
+
+.cartodb-infowindow {
+  position: absolute !important;
+  left: 5px !important;
+  top: 40px !important;
+  background-color: white !important;
+  opacity: 1 !important;
+  height: auto;
+  min-height: 280px !important;
+  max-height: 320px !important;
+  width: 220px !important;
+  text-align: center !important;
+  z-index: 12 !important;
+  border-radius: 4px !important;
+}
+
+.cartodb-popup-content {
+  margin-top: 5px;
+}
+
+.content {
+  -moz-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.cartodb-tooltip {
+  display: hidden !important;
+}
+
+#stimme-logo {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 50;
+}

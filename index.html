@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user-scalable=no" />
+
+  <title>Die Ergebnisse der Bundestagswahl 2017 im Wahlkreis Heilbronn</title>
+
+  <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Container für die Karte -->
+  <div id="map"></div>
+
+  <!--   stimme-Logo einblenden -->
+  <div id="stimme-logo">
+    <a href="http://www.stimme.de/"><img src="http://static1.heilbronnerstimme.de/stupl/pics/layout/2017/logo.png" width="75px"></a>
+  </div>
+
+  <!-- Dropdown-Menü zur Auswahl der Parteien -->
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Wählen Sie eine Partei aus
+      <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#cdu" id="cdu" class="button">CDU</a></li>
+      <li><a href="#spd" id="spd" class="button">SPD</a></li>
+      <li><a href="#gruene" id="gruene" class="button">Grüne</a></li>
+      <li><a href="#linke" id="linke" class="button">Linke</a></li>
+      <li><a href="#fdp" id="fdp" class="button">FDP</a></li>
+      <li><a href="#afd" id="afd" class="button">AfD</a></li>
+    </ul>
+  </div>
+
+  <!-- Infofenster anlegen -->
+  <div id="infowindow_template">
+    <div class="cartodb-popup-content">
+      <div class="content">
+        <h2>{{name}}</h2>
+        <p>Wahlbeteiligung: {{beteiligung}}%</p>
+        <hr>
+        <p>Ergebnis Zweitstimme:</p>
+        <center>
+          <table>
+            <tr>
+              <td style="color: #000">CDU</td>
+              <td style="color: #000">{{cdu_zweit}}%</td>
+              <td style="color: #540fc6">Linke</td>
+              <td style="color: #540fc6">{{linke_zweit}}%</td>
+            </tr>
+            <tr>
+              <td style="color: #eb0000">SPD</td>
+              <td style="color: #eb0000">{{spd_zweit}}%</td>
+              <td style="color: #ecbd00">FDP</td>
+              <td style="color: #ecbd00">{{fdp_zweit}}%</td>
+            </tr>
+            <tr>
+              <td style="color: #5cb813">Grüne</td>
+              <td style="color: #5cb813">{{gruene_zweit}}%</td>
+              <td style="color: #00baff">AfD</td>
+              <td style="color: #00baff">{{afd_zweit}}%</td>
+            </tr>
+          </table>
+        </center>
+        <hr>
+        <p>Ergebnis Erstimmen:</p>
+        <center>
+          <table>
+            <tr>
+              <td style="color: #000">Throm</td>
+              <td style="color: #000">{{cdu_erst}}%</td>
+              <td style="color: #540fc6">Wanner</td>
+              <td style="color: #540fc6">{{linke_erst}}%</td>
+            </tr>
+            <tr>
+              <td style="color: #eb0000">Juratovic</td>
+              <td style="color: #eb0000">{{spd_erst}}%</td>
+              <td style="color: #ecbd00">Link</td>
+              <td style="color: #ecbd00">{{fdp_erst}}%</td>
+            </tr>
+            <tr>
+              <td style="color: #5cb813">Fick</td>
+              <td style="color: #5cb813">{{gruene_erst}}%</td>
+              <td style="color: #00baff">Kögel</td>
+              <td style="color: #00baff">{{afd_erst}}%</td>
+            </tr>
+          </table>
+        </center>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alle nötigen Scripte einbinden -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/cartodb.js"></script>
+  <script src="js/map.js"></script>
+
+</body>
+
+</html>
