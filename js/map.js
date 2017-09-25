@@ -5,9 +5,9 @@ function setInitialMapZoom() {
     var mapZoom;
 
     if (viewportWidth < [800]) {
-        mapZoom = [11];
-    } else {
         mapZoom = [10];
+    } else {
+        mapZoom = [9];
     }
 
     return mapZoom;
@@ -27,7 +27,7 @@ function main() {
     var map_object = L.map('map', {
         center: [49.2285040, 9.1571390],
         zoom: setInitialMapZoom(),
-        minZoom: 8,
+        minZoom: 9,
         maxZoom: 12,
         zoomControl: false,
         attributionControl: false,
