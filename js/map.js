@@ -27,6 +27,8 @@ function main() {
     var map_object = L.map('map', {
         center: [49.2285040, 9.1571390],
         zoom: setInitialMapZoom(),
+        minZoom: 8,
+        maxZoom: 12,
         zoomControl: false,
         attributionControl: false,
         legends: false,
@@ -34,10 +36,10 @@ function main() {
     });
 
     // Zoomfunktion komplett deaktivieren
-    map_object.touchZoom.disable();
-    map_object.doubleClickZoom.disable();
-    map_object.scrollWheelZoom.disable();
-    map_object.keyboard.disable();
+    /*    map_object.touchZoom.disable();
+        map_object.doubleClickZoom.disable();
+        map_object.scrollWheelZoom.disable();
+        map_object.keyboard.disable();*/
 
     var sublayers = [];
 
