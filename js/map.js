@@ -1,13 +1,37 @@
+function setInitialMapZoom() {
+
+    var viewportWidth = window.innerWidth;
+    //    var center = [49.1397278, 9.219251];
+    var mapZoom;
+
+    if (viewportWidth < [800]) {
+        mapZoom = [12];
+    } else {
+        mapZoom = [10];
+    }
+
+    return mapZoom;
+};
+
 function main() {
 
     var polygon;
 
+    /*    var map_object = L.map('map', {
+            zoomControl: false,
+            attributionControl: false,
+            legends: false,
+            layer_selector: false,
+        }).setView([49.2285040, 9.1571390], 10);*/
+
     var map_object = L.map('map', {
+        center: [49.2285040, 9.1571390],
+        zoom: setInitialMapZoom(),
         zoomControl: false,
         attributionControl: false,
         legends: false,
         layer_selector: false,
-    }).setView([49.2285040, 9.1571390], 10);
+    });
 
     // Zoomfunktion komplett deaktivieren
     map_object.touchZoom.disable();
